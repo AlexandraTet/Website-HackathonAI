@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Майстерня Резонансу | Нейро-Алгебра</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body class="game-page-body">
+
+    <header id="main-header" class="game-header">
+        <div class="logo">МАЙСТЕРНЯ РЕЗОНАНСУ</div>
+        <nav>
+            <a href="index.html">← На головну сторінку</a>
+        </nav>
+    </header>
+
+    <main id="game-container">
+        
+        <h1>🎮 Створіть свій Ідеальний Резонанс</h1>
+        <p class="game-description">Налаштуйте математичні параметри аудіо-патерну та текстової структури. Ваша мета — досягти максимального <strong>"Ментального Імунітету"</strong> (Захист) або максимального <strong>"Когнітивного Зачеплення"</strong> (Привернення уваги).</p>
+
+        <div id="game-controls">
+            
+            <div class="control-block">
+                <h3>1. 🎵 Математика Звукових Хвиль (Аудіо-Патерн)</h3>
+                <p class="control-label">Виберіть <strong>Ритмічну Гармонію (Частота)</strong>:</p>
+
+                <div id="audio-player-container">
+                    <button id="play-rhythm-button" class="action-button">▶ Слухати обраний ритм</button>
+                    <p id="current-rhythm-info" class="control-label" style="margin-top: 10px;">Обрано: Alpha-хвилі (Стандарт)</p>
+                    
+                    <audio id="audio-alpha_standart" src="assets/audio/alpha_standart.mp3" loop preload="auto"></audio>
+                    <audio id="audio-beta_standart" src="assets/audio/beta_standart.mp3" loop preload="auto"></audio>
+                    <audio id="audio-chaos_standart" src="assets/audio/chaos_standart.mp3" loop preload="auto"></audio>
+
+                    <audio id="audio-alpha_linear" src="assets/audio/alpha1.mp3" loop preload="auto"></audio>
+                    <audio id="audio-alpha_hook" src="assets/audio/alpha2.mp3" loop preload="auto"></audio>
+                    <audio id="audio-alpha_repetition" src="assets/audio/alpha3.mp3" loop preload="auto"></audio>
+
+                    <audio id="audio-beta_linear" src="assets/audio/beta1.mp3" loop preload="auto"></audio>
+                    <audio id="audio-beta_hook" src="assets/audio/beta2.mp3" loop preload="auto"></audio>
+                    <audio id="audio-beta_repetition" src="assets/audio/beta3.mp3" loop preload="auto"></audio>
+
+                    <audio id="audio-chaos_linear" src="assets/audio/chaos1.mp3" loop preload="auto"></audio>
+                    <audio id="audio-chaos_hook" src="assets/audio/chaos2.mp3" loop preload="auto"></audio>
+                    <audio id="audio-chaos_repetition" src="assets/audio/chaos3.mp3" loop preload="auto"></audio>
+                </div>
+
+                <div class="radio-group">
+                    <input type="radio" id="rhythm-alpha" name="rhythm" value="alpha" checked>
+                    <label for="rhythm-alpha">Alpha-хвилі (8-12 Гц): 🧘 Спокій та Фокус (+4 Імунітет)</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="rhythm-beta" name="rhythm" value="beta">
+                    <label for="rhythm-beta">Beta-хвилі (13-30 Гц): ⚡ Напруга та Швидкість (+4 Зачеплення)</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="rhythm-chaos" name="rhythm" value="chaos">
+                    <label for="rhythm-chaos">Хаотична частота: 💔 Дисонанс (+2 Зачеплення, -2 Імунітет)</label>
+                </div>
+            </div>
+
+            <div class="control-block">
+                <h3>2. 📝 Алгебра Текстової Структури (Ритміка Мови)</h3>
+                <p class="control-label">Виберіть <strong>Логічний Патерн (Ритм)</strong>:</p>
+                <div class="radio-group">
+                    <input type="radio" id="structure-linear" name="structure" value="linear">
+                    <label for="structure-linear">Лінійний: 📘 Чітка Логіка (+3 Імунітет, +1 Зачеплення)</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="structure-hook" name="structure" value="hook">
+                    <label for="structure-hook">Клікбейт: 🤯 Різкий Зачіп (+4 Зачеплення, -1 Імунітет)</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="structure-repetition" name="structure" value="repetition">
+                    <label for="structure-repetition">Циклічний: 🔁 Повторення та Закріплення (+2 Імунітет, +2 Зачеплення)</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="result-simulation">
+            <h2>📊 Результат Вашого Резонансу</h2>
+            <div class="metrics-grid">
+                <div class="metric-box" id="metric-immune">
+                    <span class="metric-title">Ментальний Імунітет</span>
+                    <span class="metric-value">0</span>
+                </div>
+                <div class="metric-box" id="metric-hook">
+                    <span class="metric-title">Когнітивне Зачеплення</span>
+                    <span class="metric-value">0</span>
+                </div>
+            </div>
+
+            <p class="final-message" id="simulation-message">
+                Оберіть параметри вище, щоб побачити, як змінюються ваші метрики. Спробуйте досягти балансу або максимізувати один з показників!
+            </p>
+        </div>
+
+    </main>
+    
+    <script src="js/script.js"></script> 
+
+</body>
+</html>
